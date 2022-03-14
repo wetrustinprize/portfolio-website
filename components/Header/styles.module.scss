@@ -10,7 +10,7 @@
 
 .logo {
     flex: 1 1 auto;
-    margin-left: 50px;
+    margin-left: var(--page-horizontal-margin);
 }
 
 $bar-vertical-padding: 20px;
