@@ -1,0 +1,39 @@
+.header {
+    background: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 0;
+}
+
+.logo {
+    flex: 1 1 auto;
+    margin-left: 50px;
+}
+
+$bar-vertical-padding: 20px;
+$bar-horizontal-padding: 25px;
+
+.bar {
+    flex: 0 0 auto;
+
+    background-color: var(--purple);
+
+    padding:
+        $bar-vertical-padding $bar-horizontal-padding $bar-vertical-padding calc($bar-horizontal-padding * 2);
+    border-radius: 60px 0 0 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 50px;
+
+    >a {
+        cursor: pointer;
+        font-size: var(--font-size-normal);
+        color: white;
+        font-weight: 700;
+    }
+}
