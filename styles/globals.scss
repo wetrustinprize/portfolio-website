@@ -3,7 +3,8 @@
 
   --font-size-normal: 16px;
 
-  --page-horizontal-margin: 50px;
+  --page-horizontal-margin-min: 50px;
+  --page-horizontal-margin: max(var(--page-horizontal-margin-min), 20vw);
 }
 
 html,
