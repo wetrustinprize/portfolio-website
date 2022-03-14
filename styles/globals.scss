@@ -2,6 +2,8 @@
   --purple: #9D4EDD;
 
   --font-size-normal: 16px;
+
+  --page-horizontal-margin: 50px;
 }
 
 html,
@@ -9,6 +11,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 a {
