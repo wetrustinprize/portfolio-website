@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
-import { AnimText } from "../components/AnimText";
 import Layout from "../components/Layout";
-import PurpleDiv from "../components/PurpleDiv";
+import WelcomeCard from "../components/WelcomeCard";
+import { motion } from "framer-motion";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <PurpleDiv>
-        <h1>
-          Hello! I'm <AnimText>Peterson Adami</AnimText>.
-        </h1>
-        <h2>I'm a fullstack developer.</h2>
-      </PurpleDiv>
+      <motion.div
+        animate={{
+          opacity: [0, 1],
+          y: [-10, 0],
+        }}
+      >
+        <WelcomeCard />
+      </motion.div>
     </Layout>
   );
 };
