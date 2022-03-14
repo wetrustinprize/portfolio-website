@@ -2,11 +2,17 @@ import React from "react";
 
 import style from "./styles.module.scss";
 
-const PurpleDiv: React.FC = ({ children }) => {
+interface IPurpleDiv {
+  children: React.ReactNode;
+}
+
+const PurpleDiv: React.FC<
+  IPurpleDiv & React.HTMLAttributes<HTMLDivElement>
+> = ({ children, ...props }) => {
   return (
     <div className={style.container}>
       <div className={style.line} />
-      <div className={style.children}>{children}</div>
+      <div {...props}>{children}</div>
     </div>
   );
 };
