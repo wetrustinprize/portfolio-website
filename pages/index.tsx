@@ -1,19 +1,18 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
-import WelcomeCard from "../components/WelcomeCard";
 import { motion } from "framer-motion";
+
+import WelcomeCard from "../components/Cards/WelcomeCard";
+import AboutMeCard from "../components/Cards/AboutMeCard";
+import AnimDiv from "../components/AnimDiv";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <motion.div
-        animate={{
-          opacity: [0, 1],
-          y: [-10, 0],
-        }}
-      >
+      <AnimDiv delayPerChild={0.05} duration={0.5}>
         <WelcomeCard />
-      </motion.div>
+        <AboutMeCard />
+      </AnimDiv>
     </Layout>
   );
 };
