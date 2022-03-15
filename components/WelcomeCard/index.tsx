@@ -9,9 +9,9 @@ const WelcomeCard: React.FC = () => {
     <div className={style.container}>
       <PurpleDiv className={style.text}>
         <h1>
-          Hello! I'm <AnimText>Peterson Adami</AnimText>.
+          Hello! I&apos;m <AnimText>Peterson Adami</AnimText>.
         </h1>
-        <h2>I'm a fullstack developer.</h2>
+        <h2>I&apos;m a fullstack developer.</h2>
       </PurpleDiv>
       <Image
         className={style.image}
