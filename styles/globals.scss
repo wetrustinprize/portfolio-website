@@ -1,7 +1,11 @@
 :root {
   --purple: #9D4EDD;
+  --dark-purple: #7F3EB5;
+
+  --almost-white: #EFEFEF;
 
   --font-size-normal: 16px;
+  --font-size-big: 24px;
 
   --page-horizontal-margin-min: 50px;
   --page-horizontal-margin: max(var(--page-horizontal-margin-min), 20vw);
