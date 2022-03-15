@@ -4,17 +4,26 @@ import Image from "next/image";
 
 import styles from "./styles.module.scss";
 import logo from "../../public/logo.png";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <Image height={90} width={90} src={logo} alt="Peterson's signature" />
-      </div>
+      <Link href="/">
+        <div className={styles.logo}>
+          <Image height={90} width={90} src={logo} alt="Peterson's signature" />
+        </div>
+      </Link>
       <div className={styles.bar}>
-        <a>About</a>
-        <a>Contact</a>
-        <a>Projects</a>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
       </div>
     </header>
   );
