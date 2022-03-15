@@ -9,8 +9,9 @@
 }
 
 .logo {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     margin-left: var(--page-horizontal-margin-min);
+    cursor: pointer;
 }
 
 $bar-vertical-padding: 20px;
