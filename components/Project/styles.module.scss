@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    column-gap: 18px;
+}
+
+.imageContainer {
+    width: 60%;
+    min-height: 200px;
+    position: relative;
+    flex: 1 0 auto;
+
+    border-radius: 35px;
+    overflow: hidden;
+
+    background-color: var(--almost-white);
+}
+
+.infoContainer {
+    width: fit-content;
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 24px;
+
+    >div.text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+
+        >h1 {
+            font-size: var(--font-size-big);
+        }
+
+        >p {
+            font-size: var(--font-size-normal);
+        }
+    }
+
+}
