@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children }) => {
       <Header />
       <AnimatePresence
         exitBeforeEnter
-        onExitComplete={() => window.scrollTo(0, 0)}
+        onExitComplete={() => window.scrollTo({ behavior: "smooth", top: 0 })}
       >
         <motion.main
           variants={animVariants}
