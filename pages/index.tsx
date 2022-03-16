@@ -8,6 +8,7 @@ import AboutMeCard from "../components/Cards/AboutMeCard";
 import AnimDiv from "../components/AnimDiv";
 import SkillsCard from "../components/Cards/SkillsCard";
 import LetsWorkCard from "../components/Cards/LetsWorkCard";
+import ProjectsCard from "../components/Cards/ProjectsCard";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         <WelcomeCard />
         <AboutMeCard />
         <SkillsCard />
+        <ProjectsCard />
         <LetsWorkCard />
       </AnimDiv>
     </Layout>
