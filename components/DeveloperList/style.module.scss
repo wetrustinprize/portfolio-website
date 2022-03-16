@@ -1,0 +1,72 @@
+.title {
+    font-size: var(--font-size-big);
+    font-weight: 400;
+
+    >b {
+        font-weight: 700;
+    }
+}
+
+.devContainer {
+    display: inline-flex;
+    column-gap: 24px;
+}
+
+.container {
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.dev {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+
+    >svg:not(.favorite) {
+        $size: 50px;
+
+        height: $size;
+        width: $size;
+    }
+
+    >svg.favorite {
+        $size: 18px;
+
+        position: absolute;
+        margin-left: $size + 6px;
+
+        height: $size;
+        width: $size;
+
+        color: var(--purple);
+    }
+
+    .devTitle {
+        font-size: var(--font-size-normal);
+        font-weight: 400;
+    }
+}
+
+.rateContainer {
+    display: inline-flex;
+    column-gap: 4px;
+}
+
+.rate {
+    background-color: var(--purple);
+    border-radius: 50%;
+
+    $size: 10px;
+    height: $size;
+    width: $size;
+}
+
+.rateEmpty {
+    @extend .rate;
+    background-color: var(--gray);
+}
