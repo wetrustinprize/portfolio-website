@@ -12,6 +12,12 @@
     flex: 0 0 auto;
     margin-left: var(--page-horizontal-margin-min);
     cursor: pointer;
+
+    transition: opacity ease-out 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 $bar-vertical-padding: 20px;
@@ -36,5 +42,11 @@ $bar-horizontal-padding: 25px;
         font-size: var(--font-size-normal);
         color: white;
         font-weight: 700;
+
+        transition: color ease-out 0.3s;
+
+        &:hover {
+            color: var(--gray);
+        }
     }
 }
