@@ -1,19 +1,22 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
-import { motion } from "framer-motion";
+
+import style from "./styles.module.scss";
 
 import WelcomeCard from "../components/Cards/WelcomeCard";
 import AboutMeCard from "../components/Cards/AboutMeCard";
 import AnimDiv from "../components/AnimDiv";
 import SkillsCard from "../components/Cards/SkillsCard";
+import LetsWorkCard from "../components/Cards/LetsWorkCard";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <AnimDiv delayPerChild={0.05} duration={0.5}>
+      <AnimDiv className={style.container} delayPerChild={0.05} duration={0.5}>
         <WelcomeCard />
         <AboutMeCard />
         <SkillsCard />
+        <LetsWorkCard />
       </AnimDiv>
     </Layout>
   );
