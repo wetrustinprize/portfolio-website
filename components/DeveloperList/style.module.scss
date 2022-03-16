@@ -23,9 +23,13 @@
     width: max-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     row-gap: 6px;
+
+    >*:not(svg.favorite) {
+        margin: 0 auto;
+    }
 
     >svg:not(.favorite) {
         $size: 50px;
@@ -38,7 +42,6 @@
         $size: 18px;
 
         position: absolute;
-        margin-left: $size + 6px;
 
         height: $size;
         width: $size;
