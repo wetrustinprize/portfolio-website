@@ -5,18 +5,18 @@ import style from "./styles.module.scss";
 
 interface IButton {
   text: string;
-  outline?: boolean;
+  invert?: boolean;
   onClick?: () => void;
 }
 
 const Button: React.FC<IButton> = ({
   text,
-  outline = false,
+  invert = false,
   onClick = () => {},
 }) => {
   return (
     <button
-      className={!outline ? style.normal_button : style.outline_button}
+      className={!invert ? style.normal_button : style.outline_button}
       onClick={onClick}
     >
       {text}
