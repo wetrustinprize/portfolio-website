@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 
 import style from "./styles.module.scss";
@@ -9,18 +8,21 @@ interface IButton {
   onClick?: () => void;
 }
 
-const Button: React.FC<IButton> = ({
+const Button: React.FC<IButton & React.HTMLAttributes<HTMLDivElement>> = ({
   text,
   invert = false,
   onClick = () => {},
+  ...props
 }) => {
   return (
-    <button
-      className={!invert ? style.normal_button : style.outline_button}
-      onClick={onClick}
-    >
-      {text}
-    </button>
+    <div {...props}>
+      <button
+        className={!invert ? style.normal_button : style.outline_button}
+        onClick={onClick}
+      >
+        {text}
+      </button>
+    </div>
   );
 };
 
