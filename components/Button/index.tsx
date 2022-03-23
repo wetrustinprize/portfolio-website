@@ -15,7 +15,12 @@ const Button: React.FC<IButton & React.HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   return (
-    <div {...props}>
+    <div
+      style={{
+        width: "max-content",
+      }}
+      {...props}
+    >
       <button
         className={!invert ? style.normal_button : style.outline_button}
         onClick={onClick}
