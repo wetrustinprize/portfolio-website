@@ -12,10 +12,9 @@ const ProjectsCard: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      {" "}
       <Title>Some of my projects</Title>{" "}
       <div className={styles.projects}>
-        {PROJECTS.map((project, index) => (
+        {PROJECTS.slice(0, 2).map((project, index) => (
           <Project key={index} project={project} />
         ))}
       </div>
