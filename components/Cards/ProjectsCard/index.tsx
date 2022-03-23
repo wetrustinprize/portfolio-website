@@ -1,18 +1,25 @@
+import { useRouter } from "next/router";
 import React from "react";
 import PROJECTS from "../../../data/projects";
+import Button from "../../Button";
 import Project from "../../Project";
 import Title from "../../Title";
 
-import style from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 const ProjectsCard: React.FC = () => {
+  const router = useRouter();
+
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       {" "}
       <Title>Some of my projects</Title>{" "}
-      {PROJECTS.map((project, index) => (
-        <Project key={index} project={project} />
-      ))}
+      <div className={styles.projects}>
+        {PROJECTS.map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
+      </div>
+      <Button text="See more" onClick={() => router.push("/projects")} />
     </div>
   );
 };
