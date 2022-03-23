@@ -19,7 +19,11 @@ const ProjectsCard: React.FC = () => {
           <Project key={index} project={project} />
         ))}
       </div>
-      <Button text="See more" onClick={() => router.push("/projects")} />
+      <Button
+        className={styles.button}
+        text="See more"
+        onClick={() => router.push("/projects")}
+      />
     </div>
   );
 };
