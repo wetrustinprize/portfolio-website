@@ -9,12 +9,15 @@ import Link from "next/link";
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <Link href="/">
+      <Link passHref href="/">
         <div className={styles.logo}>
           <Image height={90} width={90} src={logo} alt="Peterson's signature" />
         </div>
       </Link>
       <div className={styles.bar}>
+        <Link href="/">
+          <a className={styles.home}>Home</a>
+        </Link>
         <Link href="/about">
           <a>About</a>
         </Link>

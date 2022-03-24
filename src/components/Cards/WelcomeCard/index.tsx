@@ -13,13 +13,15 @@ const WelcomeCard: React.FC = () => {
         </h1>
         <h2>I&apos;m a fullstack developer.</h2>
       </PurpleDiv>
-      <Image
-        className={style.image}
-        height={242 / 2}
-        width={242 / 2}
-        alt="Me"
-        src="https://github.com/wetrustinprize.png"
-      />
+      <div className={style.imageDiv}>
+        <Image
+          className={style.image}
+          height={242 / 2}
+          width={242 / 2}
+          alt="Me"
+          src="https://github.com/wetrustinprize.png"
+        />
+      </div>
     </div>
   );
 };

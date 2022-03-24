@@ -6,6 +6,10 @@
     justify-content: space-between;
 
     padding: 25px 0;
+
+    @media only screen and (max-width: 425px) {
+        padding: 0;
+    }
 }
 
 .logo {
@@ -17,6 +21,10 @@
 
     &:hover {
         opacity: 0.8;
+    }
+
+    @media only screen and (max-width: 425px) {
+        display: none;
     }
 }
 
@@ -37,6 +45,10 @@ $bar-horizontal-padding: 25px;
     align-items: center;
     column-gap: 50px;
 
+    >a.home {
+        display: none;
+    }
+
     >a {
         cursor: pointer;
         font-size: var(--font-size-normal);
@@ -47,6 +59,16 @@ $bar-horizontal-padding: 25px;
 
         &:hover {
             color: var(--gray);
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        border-radius: 0;
+        flex: 1 0 auto;
+        justify-content: center;
+
+        >a.home {
+            display: block;
         }
     }
 }

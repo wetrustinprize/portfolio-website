@@ -47,6 +47,7 @@ const Project: React.FC<IProject> = ({ project }) => {
           />
         ))}
       </div>
+      <div className={style.divider} />
     </div>
   );
 };
