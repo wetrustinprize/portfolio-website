@@ -16,7 +16,7 @@ $ yarn dev
 
 ## Credits
 
-| who                    | what             |
-| ---------------------- | ---------------- |
-| Peterson Adami Candido | Design + Coding  |
-| Renato Sergio Junior   | Signature vector |
+| who                          | what             |
+| ---------------------------- | ---------------- |
+| Peterson Adami Candido       | Design + Coding  |
+| Renato S. de Oliveira Junior | Signature vector |
