@@ -8,12 +8,24 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
+    @media only screen and (max-width: 425px) {
+        padding: 50px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+    }
 }
 
 .title {
     font-size: 42px;
     text-align: center;
     margin-bottom: 32px;
+
+    @media only screen and (max-width: 425px) {
+        margin-top: 32px;
+    }
 }
 
 .left,
@@ -33,6 +45,10 @@
 
     color: white;
     font-size: var(--font-size-big);
+
+    @media only screen and (max-width: 425px) {
+        font-size: var(--font-size-normal);
+    }
 
     >svg {
         margin-right: 16px;
