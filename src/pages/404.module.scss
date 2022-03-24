@@ -1,0 +1,26 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: var(--purple);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: var(--font-size-medium);
+}
+
+.return {
+    cursor: pointer;
+    color: var(--purple);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+}
