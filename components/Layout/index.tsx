@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header";
 import { AnimatePresence, motion } from "framer-motion";
 
-import style from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 const Layout: React.FC = ({ children }) => {
   const animVariants = {
@@ -12,7 +12,7 @@ const Layout: React.FC = ({ children }) => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <Header />
       <AnimatePresence
         exitBeforeEnter
@@ -23,12 +23,12 @@ const Layout: React.FC = ({ children }) => {
           initial="hidden"
           animate="enter"
           exit="exit"
-          className={style.container}
+          className={styles.content}
         >
           {children}
         </motion.main>
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
