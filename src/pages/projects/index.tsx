@@ -1,12 +1,12 @@
+import AnimDiv from "@components/AnimDiv";
+import Button from "@components/Button";
+import Layout from "@components/Layout";
+import Project from "@components/Project";
+import PROJECTS from "@data/projects";
 import { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
-import AnimDiv from "../../components/AnimDiv";
-import Button from "../../components/Button";
-import Layout from "../../components/Layout";
-import Project from "../../components/Project";
-import PROJECTS from "../../data/projects";
 
 import styles from "./styles.module.scss";
 
