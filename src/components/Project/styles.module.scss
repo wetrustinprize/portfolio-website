@@ -21,6 +21,8 @@
 
     background-color: var(--almost-white);
 
+    border: 1px solid var(--gray);
+
     @media only screen and (max-width: 425px) {
         width: 100%;
     }
@@ -51,11 +53,41 @@
     >div.text {
         display: flex;
         flex-direction: column;
-        row-gap: 12px;
+        row-gap: 8px;
 
-        >h1 {
-            font-size: var(--font-size-big);
+        >div.title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            border-bottom: solid 2px black;
+
+            >h1 {
+                font-size: var(--font-size-big);
+            }
+
+            >div.tags {
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                column-gap: 6px;
+
+                >span {
+                    height: max-content;
+                    user-select: none;
+                    background-color: black;
+                    color: white;
+                    font-size: var(--font-size-small);
+                    padding: 3px 8px;
+                    border-radius: 32px;
+                    font-weight: 700;
+                }
+            }
         }
+
 
         >p {
             font-size: var(--font-size-normal);
