@@ -40,6 +40,10 @@ $bar-horizontal-padding: 25px;
         $bar-vertical-padding $bar-horizontal-padding $bar-vertical-padding calc($bar-horizontal-padding * 2);
     border-radius: 60px 0 0 60px;
 
+    @media only screen and (max-width: 425px) {
+        padding: $bar-vertical-padding $bar-horizontal-padding;
+    }
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
