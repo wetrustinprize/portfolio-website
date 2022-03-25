@@ -4,6 +4,10 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
     @media screen and (max-width: 425px) {
         margin-top: 32px;
     }

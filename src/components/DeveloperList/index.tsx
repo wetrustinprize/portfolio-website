@@ -4,20 +4,14 @@ import PurpleDiv from "../PurpleDiv";
 import style from "./style.module.scss";
 
 import { BsSuitHeartFill } from "react-icons/bs";
-
-export interface DevTool {
-  icon: React.ReactNode;
-  name: string;
-  rate: number;
-  favorite?: boolean;
-}
+import DevSkill from "@interfaces/developerSkill";
 
 export interface IDeveloperList {
   title: {
     prefix: string;
     sufix: string;
   };
-  devTools: DevTool[];
+  devTools: DevSkill[];
 }
 
 const DeveloperList: React.FC<IDeveloperList> = ({ title, devTools }) => {
