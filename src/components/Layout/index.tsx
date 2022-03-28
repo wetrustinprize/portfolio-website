@@ -3,6 +3,7 @@ import Header from "../Header";
 import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./styles.module.scss";
+import Footer from "@components/Footer";
 
 const Layout: React.FC = ({ children }) => {
   const animVariants = {
@@ -28,6 +29,7 @@ const Layout: React.FC = ({ children }) => {
           {children}
         </motion.main>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 };
