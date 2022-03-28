@@ -7,8 +7,10 @@ import {
   SiUnrealengine,
   SiGraphql,
   SiExpress,
+  SiNextdotjs,
+  SiVercel,
 } from "react-icons/si";
-import { FaReact, FaAngular, FaPython, FaUnity } from "react-icons/fa";
+import { FaReact, FaAngular, FaPython, FaUnity, FaAws } from "react-icons/fa";
 
 const SKILLS: IDeveloperList[] = [
   {
@@ -45,13 +47,19 @@ const SKILLS: IDeveloperList[] = [
       {
         icon: <FaReact />,
         name: "React",
-        rate: 3,
+        rate: 4,
         favorite: true,
       },
       {
         icon: <FaAngular />,
         name: "Angular",
         rate: 2,
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "Next.js",
+        rate: 3,
+        favorite: true,
       },
     ],
   },
@@ -77,7 +85,26 @@ const SKILLS: IDeveloperList[] = [
   {
     title: {
       prefix: "known",
-      sufix: "Game Engines",
+      sufix: "cloud services",
+    },
+    devTools: [
+      {
+        icon: <FaAws />,
+        name: "AWS",
+        rate: 1,
+      },
+      {
+        icon: <SiVercel />,
+        name: "Vercel",
+        rate: 2,
+        favorite: true,
+      },
+    ],
+  },
+  {
+    title: {
+      prefix: "known",
+      sufix: "game engines",
     },
     devTools: [
       {
