@@ -3,10 +3,8 @@ export default interface Project {
   description: string;
   image: string;
   tags?: string[];
-  buttons?: [
-    {
-      text: string;
-      link: string;
-    }
-  ];
+  buttons?: {
+    text: string;
+    link: string;
+  }[];
 }
