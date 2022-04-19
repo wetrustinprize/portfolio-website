@@ -37,13 +37,15 @@ const Project: React.FC<IProject> = ({ project }) => {
           </div>
           <p>{project.description}</p>
         </div>
-        {project.buttons?.map((button, index) => (
-          <Button
-            key={index}
-            text={button.text}
-            onClick={() => router.push(button.link)}
-          />
-        ))}
+        <div className={style.buttons}>
+          {project.buttons?.map((button, index) => (
+            <Button
+              key={index}
+              text={button.text}
+              onClick={() => router.push(button.link)}
+            />
+          ))}
+        </div>
       </div>
       <div className={style.divider} />
     </div>
