@@ -10,7 +10,9 @@
   --font-size-big: 24px;
 
   --page-horizontal-margin-min: 25px;
+
   --page-horizontal-margin: max(var(--page-horizontal-margin-min), 20vw);
+  --page-horizontal-margin-smaller: max(var(--page-horizontal-margin-min), 10vw);
 }
 
 html,
