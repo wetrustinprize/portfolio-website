@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
       <Head>
         <title>Prize&apos; Projects</title>
       </Head>
-      <Layout>
+      <Layout useSmallerMargin>
         <AnimDiv
           className={styles.container}
           delayPerChild={0.05}
@@ -27,12 +27,12 @@ const Projects: NextPage = () => {
           {PROJECTS.map((project, index) => (
             <Project key={index} project={project} />
           ))}
-          <Button
-            className={styles.button}
-            text="More in my Github"
-            onClick={() => router.push("https://github.com/wetrustinprize")}
-          />
         </AnimDiv>
+        <Button
+          className={styles.button}
+          text="More in my Github"
+          onClick={() => router.push("https://github.com/wetrustinprize")}
+        />
       </Layout>
     </>
   );

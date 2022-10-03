@@ -4,9 +4,13 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 32px;
+
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
 
     @media screen and (max-width: 425px) {
         margin-top: 32px;
