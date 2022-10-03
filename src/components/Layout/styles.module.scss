@@ -1,5 +1,10 @@
 .content {
     padding: 0 var(--page-horizontal-margin);
+
+    &.smallMargin {
+        padding: 0 var(--page-horizontal-margin-smaller);
+    }
+
     flex: 1 0 auto;
 
     min-height: 100vh;

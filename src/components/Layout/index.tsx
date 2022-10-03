@@ -5,7 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Footer from "@components/Footer";
 
-const Layout: React.FC = ({ children }) => {
+interface ILayout {
+  children: React.ReactNode;
+  useSmallerMargin?: boolean;
+}
+
+const Layout: React.FC<ILayout> = ({ children, useSmallerMargin }: ILayout) => {
   const animVariants = {
     hidden: { opacity: 0 },
     enter: { opacity: 1 },
@@ -24,7 +29,9 @@ const Layout: React.FC = ({ children }) => {
           initial="hidden"
           animate="enter"
           exit="exit"
-          className={styles.content}
+          className={
+            styles.content + (useSmallerMargin ? " " + styles.smallMargin : "")
+          }
         >
           {children}
         </motion.main>
