@@ -36,6 +36,15 @@ const Project: React.FC<IProject> = ({ project }) => {
             )}
           </div>
           <p>{project.description}</p>
+          {project.points && (
+            <div className={style.points}>
+              <ul>
+                {project.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <div className={style.buttons}>
           {project.buttons?.map((button, index) => (

@@ -63,6 +63,22 @@
         flex-direction: column;
         row-gap: 8px;
 
+        >div.points {
+            >ul {
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+
+                >li {
+                    font-size: 14px;
+
+                    color: var(--gray);
+
+                    list-style: disc;
+                    margin-left: 20px;
+                }
+            }
+        }
+
         >div.title {
             display: flex;
             flex-direction: row;
