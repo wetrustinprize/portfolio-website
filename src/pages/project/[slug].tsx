@@ -1,15 +1,19 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Layout from "@components/Layout";
 
+import { getMDXPaths, getMDXSource, MDXData, MDXExits } from "src/utils/mdx";
+
 interface IProject {
   source: any;
+  data: MDXData;
 }
 
-const Project: NextPage<IProject> = ({ source }: IProject) => {
+const Project: NextPage<IProject> = ({ source, data }: IProject) => {
   return (
     <Layout useSmallerMargin>
+      <h1>{data.title}</h1>
+      <h2>{data.description}</h2>
       <MDXRemote {...source} components={{}} />
     </Layout>
   );
@@ -18,14 +22,24 @@ const Project: NextPage<IProject> = ({ source }: IProject) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     fallback: true,
-    paths: [{ params: { slug: "zork" } }],
+    paths: getMDXPaths("projects"),
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const source = "Some **mdx** text, with a component";
-  const mdxSource = await serialize(source);
-  return { props: { source: mdxSource } };
+  // Check if exists
+  if (!params || !params.slug || !MDXExits("projects", params.slug as string))
+    return {
+      notFound: true,
+    };
+
+  // Get information
+  const { source, data } = await getMDXSource(
+    "projects",
+    params.slug as string
+  );
+
+  return { props: { source, data } };
 };
 
 export default Project;
