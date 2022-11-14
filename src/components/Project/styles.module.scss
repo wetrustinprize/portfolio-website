@@ -4,6 +4,8 @@
     overflow: hidden;
     column-gap: 18px;
 
+    cursor: pointer;
+
     @media only screen and (max-width: 425px) {
         flex-direction: column;
         row-gap: 18px;

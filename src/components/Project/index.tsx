@@ -1,59 +1,40 @@
-import Button from "@components/Button";
 import Project from "@interfaces/projects";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
+import { MDXData } from "src/utils/MDX/Data";
 import style from "./styles.module.scss";
 
 interface IProject {
-  project: Project;
+  data: MDXData;
+
+  onClick?: () => void;
 }
 
-const Project: React.FC<IProject> = ({ project }) => {
-  const router = useRouter();
-
+const Project: React.FC<IProject> = ({ data, onClick }: IProject) => {
   return (
-    <div className={style.container}>
+    <div onClick={() => onClick && onClick()} className={style.container}>
       <div className={style.imageContainer}>
         <Image
           className={style.image}
-          src={project.image}
+          src={data.banner || "logo.png"}
           layout="fill"
-          alt={project.title}
+          alt={data.title}
           objectFit="cover"
         />
       </div>
       <div className={style.infoContainer}>
         <div className={style.text}>
           <div className={style.title}>
-            <h1>{project.title}</h1>
-            {project.tags && (
+            <h1>{data.title}</h1>
+            {data.tags && (
               <div className={style.tags}>
-                {project.tags.map((tag) => (
+                {data.tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
               </div>
             )}
           </div>
-          <p>{project.description}</p>
-          {project.points && (
-            <div className={style.points}>
-              <ul>
-                {project.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-        <div className={style.buttons}>
-          {project.buttons?.map((button, index) => (
-            <Button
-              key={index}
-              text={button.text}
-              onClick={() => router.push(button.link)}
-            />
-          ))}
+          <p>{data.description}</p>
         </div>
       </div>
       <div className={style.divider} />
