@@ -8,6 +8,7 @@ export interface MDXData {
   tags?: string[];
   banner?: string;
 
+  url: string;
   slug: string;
 
   /** The MDX content (without the data) */
@@ -41,6 +42,7 @@ export const getData = (folder: string, slug: string): MDXData => {
     banner: data.banner,
     content,
     slug,
+    url: `/${folder}/${slug.replace(".mdx", "")}`,
   } as MDXData;
 
   return formatedData;
