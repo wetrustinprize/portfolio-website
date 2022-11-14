@@ -3,15 +3,32 @@ import Button from "@components/Button";
 import Layout from "@components/Layout";
 import Project from "@components/Project";
 import PROJECTS from "@data/projects";
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { getAllDatas, MDXData } from "src/utils/MDX/Data";
 
 import styles from "./styles.module.scss";
 
-const Projects: NextPage = () => {
+interface IProjects {
+  datas: MDXData[];
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const datas = getAllDatas("projects");
+
+  return {
+    props: {
+      datas,
+    },
+  };
+};
+
+const Projects: NextPage<IProjects> = ({ datas }: IProjects) => {
   const router = useRouter();
+
+  console.log({ datas });
 
   return (
     <>
