@@ -21,7 +21,7 @@ export const getMDX = async (
   folder: string,
   slug: string
 ): Promise<MDXFull> => {
-  const data = getData(folder, slug);
+  const data = getData(folder, slug + ".mdx");
   const source = await serialize(data.content);
 
   return { data, source };
