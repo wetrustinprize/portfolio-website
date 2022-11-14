@@ -2,7 +2,6 @@ import AnimDiv from "@components/AnimDiv";
 import Button from "@components/Button";
 import Layout from "@components/Layout";
 import Project from "@components/Project";
-import PROJECTS from "@data/projects";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -28,8 +27,6 @@ export const getStaticProps: GetStaticProps = async () => {
 const Projects: NextPage<IProjects> = ({ datas }: IProjects) => {
   const router = useRouter();
 
-  console.log({ datas });
-
   return (
     <>
       <Head>
@@ -41,8 +38,12 @@ const Projects: NextPage<IProjects> = ({ datas }: IProjects) => {
           delayPerChild={0.05}
           duration={0.5}
         >
-          {PROJECTS.map((project, index) => (
-            <Project key={index} project={project} />
+          {datas.map((data, index) => (
+            <Project
+              onClick={() => router.push(data.url)}
+              key={index}
+              data={data}
+            />
           ))}
         </AnimDiv>
         <Button
