@@ -26,10 +26,6 @@ const PROJECTS: Project[] = [
         text: "Github",
         link: "https://github.com/wetrustinprize/distancier",
       },
-      {
-        text: "Demo",
-        link: "https://distancier.wetrustinprize.com",
-      },
     ],
     tags: ["Next.js", "Google API"],
   },
