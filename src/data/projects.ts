@@ -2,6 +2,19 @@ import Project from "@interfaces/projects";
 
 const PROJECTS: Project[] = [
   {
+    title: "Pnalt",
+    description:
+      "1v1 online footbal game for Android and iOS, made using Unity and Photon.",
+    image: "/projects/pnalt.png",
+    tags: ["Unity", "Multiplayer"],
+    buttons: [
+      {
+        text: "Play Store",
+        link: "https://play.google.com/store/apps/details?id=com.luminostechnology.pnalt",
+      },
+    ],
+  },
+  {
     title: "Zork",
     description:
       "Simple service to trade points with your friends, or ask points from them.",
@@ -34,12 +47,6 @@ const PROJECTS: Project[] = [
     description:
       "Helped making the API for fetching data from popular social media platforms.",
     image: "/projects/q1fluencer.png",
-    buttons: [
-      {
-        text: "Website",
-        link: "https://www.querouminfluencer.com.br",
-      },
-    ],
     tags: ["Wix", "Javascript"],
   },
 ];
